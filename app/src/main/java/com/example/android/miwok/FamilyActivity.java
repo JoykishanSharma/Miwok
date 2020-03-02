@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -15,9 +17,6 @@ public class FamilyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
-
-        LinearLayout linearLayout = findViewById(R.id.linear_layout);
-        linearLayout.setBackgroundColor(Color.parseColor("#379237"));
 
         ArrayList<Word> family = new ArrayList<>();
 
@@ -34,7 +33,7 @@ public class FamilyActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.list);
 
-        WordAdapter adapter = new WordAdapter(this, family);
+        WordAdapter adapter = new WordAdapter(this, family,R.color.category_family);
 
         listView.setAdapter(adapter);
     }
