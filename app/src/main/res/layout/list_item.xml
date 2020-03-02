@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/miwok_text_view"
+    <ImageView
+        android:id="@+id/default_image_view"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:contentDescription="@string/todo"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="lutti"/>
+        android:layout_height="88dp"
+        android:layout_toEndOf="@id/default_image_view"
+        android:layout_toRightOf="@id/default_image_view"
+        android:background="#FD8E09"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp">
 
-    <TextView
-        android:id="@+id/default_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="one"/>
+        <TextView
+            android:id="@+id/miwok_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="lutti" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/default_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            tools:text="one" />
+
+    </LinearLayout>
+
+</RelativeLayout>

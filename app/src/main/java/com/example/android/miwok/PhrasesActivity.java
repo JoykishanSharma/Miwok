@@ -2,7 +2,9 @@ package com.example.android.miwok;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -13,6 +15,9 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        LinearLayout linearLayout = findViewById(R.id.linear_layout);
+        linearLayout.setBackgroundColor(Color.parseColor("#16AFCA"));
 
         ArrayList<Word> phrases = new ArrayList<>();
 
